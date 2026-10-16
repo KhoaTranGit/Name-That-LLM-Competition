@@ -1,1 +1,1 @@
-# Name-That-LLM-Competition
+# Name That LLM Competition
