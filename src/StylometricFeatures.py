@@ -12,7 +12,7 @@ from sklearn.svm import LinearSVC
 PUNCTUATIONS = [
   "-", "–", "—", ",", 
   '"', ";", ":", "?", 
-  "!", "...", "(", ")"
+  "!", "...", "("
 ]
 
 
