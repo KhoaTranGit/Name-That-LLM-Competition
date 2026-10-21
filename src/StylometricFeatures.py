@@ -54,7 +54,7 @@ class StylometricFeatures(BaseEstimator, TransformerMixin):
             len(words), len(text),
 
             # Punctuation frequency
-            *[text.count(c)/n_words for c in PUNCTUATIONS],
+            *[text.count(c)/n_words for c in StylometricFeatures.PUNCTUATIONS],
             # Word statistics
             np.mean(word_lengths) if words else 0,
             np.std(word_lengths) if words else 0,
