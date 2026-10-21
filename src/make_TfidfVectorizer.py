@@ -1,3 +1,4 @@
+import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 def make_TfidfVectorizer(analyzer="char", ngram_range=(3,5), min_df=2,
