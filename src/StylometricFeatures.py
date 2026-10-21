@@ -7,13 +7,6 @@ from sklearn.compose import ColumnTransformer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import make_pipeline as pipe
-from sklearn.svm import LinearSVC
-
-PUNCTUATIONS = [
-  "-", "–", "—", ",", 
-  '"', ";", ":", "?", 
-  "!", "...", "("
-]
 
 
 class StylometricFeatures(BaseEstimator, TransformerMixin):
@@ -32,6 +25,12 @@ class StylometricFeatures(BaseEstimator, TransformerMixin):
         sparse_threshold=1.0
     )
     """
+    
+    PUNCTUATIONS = [
+      "-", "–", "—", ",", 
+      '"', ";", ":", "?", 
+      "!", "...", "("
+    ]
     def fit(self, X, y=None): return self
 
     def transform(self, X):
