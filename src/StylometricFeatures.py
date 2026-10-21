@@ -68,3 +68,17 @@ class StylometricFeatures(BaseEstimator, TransformerMixin):
             # Capitalization
             sum(c.isupper() for c in text) / n_chars,
         ]
+
+    def get_feature_names_out(self, input_features=None):
+        return np.array([
+            "word_count",
+            "char_count",
+            *[f"punct_{repr(p)}" for p in self.PUNCTUATIONS],
+            "mean_word_length",
+            "std_word_length",
+            "mean_sentence_length",
+            "std_sentence_length",
+            "vocabulary_diversity",
+            "newline_frequency",
+            "uppercase_ratio",
+        ], dtype=object)
